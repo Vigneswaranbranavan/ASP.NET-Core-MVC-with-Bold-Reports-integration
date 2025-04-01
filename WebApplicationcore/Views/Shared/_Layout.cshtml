@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplicationcore</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplicationcore.styles.css" asp-append-version="true" />
+
+
+    <!-- Report Viewer component styles -->
+    <link href="https://cdn.boldreports.com/8.1.1/content/v2.0/tailwind-light/bold.report-viewer.min.css" rel="stylesheet" />
+    <!-- Report Viewer component dependent script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.boldreports.com/8.1.1/scripts/v2.0/common/bold.reports.common.min.js"></script>
+    <script src="https://cdn.boldreports.com/8.1.1/scripts/v2.0/common/bold.reports.widgets.min.js"></script>
+    <!-- Report Viewer component script -->
+    <script src="https://cdn.boldreports.com/8.1.1/scripts/v2.0/bold.report-viewer.min.js"></script>
+
+</head>
+
+
+<body>
+    <div style="min-height: 100vh;width: 100%;">
+        @RenderBody()
+    </div>
+
+    @RenderSection("Scripts", required: false)
+    <!-- Bold Reports<sup>®</sup> script manager -->
+    <bold-script-manager></bold-script-manager>
+</body>
+</html>
