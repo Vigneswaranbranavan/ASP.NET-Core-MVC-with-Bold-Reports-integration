@@ -1,5 +1,4 @@
 var builder = WebApplication.CreateBuilder(args);
-Bold.Licensing.BoldLicenseProvider.RegisterLicense("i/WVKBqHfawpMKdmd4NXbXaDXBLxpUFmJcZ9RG9ufhQ=");
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
