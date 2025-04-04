@@ -8,14 +8,35 @@
 <head>
     <title>Bold Reports - Report Designer</title>
     <link href="https://cdn.boldreports.com/8.1.1/content/v2.0/tailwind-light/bold.report-designer.min.css" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        bold-report-designer {
+            width: 100%;
+            height: 100%;
+        }
+    
+    </style>
 </head>
 <body>
-    <div id="report-designer-container">
 
-        <bold-report-designer id="reportDesigner"
-                              service-url="/api/ReportDesigner">
-        </bold-report-designer>
+    <div id="reportDesigner" class="designer-container">
+        <div id="report-designer-container">
+
+            <bold-report-designer id="reportDesigner"
+                                  service-url="/api/ReportDesigner">
+            </bold-report-designer>
+        </div>
     </div>
+
+
 
 
 </body>
