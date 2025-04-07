@@ -8,11 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="Bold.Licensing" Version="8.1.6" />
-    <PackageReference Include="BoldReports.AspNet.Core" Version="8.1.6" />
+    <PackageReference Include="BoldReports.AspNet.Core" Version="8.1.7" />
+    <PackageReference Include="BoldReports.Data.Csv" Version="8.1.6" />
+    <PackageReference Include="BoldReports.Data.WebData" Version="8.1.6" />
     <PackageReference Include="BoldReports.Net.Core" Version="8.1.6" />
     <PackageReference Include="BoldReports.Web" Version="8.1.6" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="9.0.2.59" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.3" />
     <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms" Version="150.1652.0" />
   </ItemGroup>

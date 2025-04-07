@@ -31,6 +31,7 @@ public class ReportDesignerController : Controller, IReportDesignerController
         return ReportDesignerHelper.ProcessDesigner(jsonResult, this, null, _cache);
     }
 
+
     [HttpPost]
     public object PostFormDesignerAction()
     {
@@ -57,6 +58,28 @@ public class ReportDesignerController : Controller, IReportDesignerController
             file.CopyTo(fileStream);
         }
     }
+
+    //[HttpPost]
+    //public object GetDataSourceItems([FromBody] Dictionary<string, object> jsonData)
+    //{
+    //    // Only allow Microsoft SQL and Shared data sources
+    //    var dataSources = new List<CustomDataSourceItem>
+    //{
+    //    new CustomDataSourceItem
+    //    {
+    //        Name = "Microsoft SQL Server",
+    //        Type = "SQL"
+    //    },
+    //    new CustomDataSourceItem
+    //    {
+    //        Name = "Shared Data Source",
+    //        Type = "Shared"
+    //    }
+    //};
+
+    //    return dataSources;
+    //}
+
 
     [HttpGet]
     public object GetImage(string key, string image)
@@ -211,10 +234,10 @@ public class ReportDesignerController : Controller, IReportDesignerController
         return Path.Combine(_hostingEnvironment.WebRootPath, ResourceFolder);
     }
 
-    private string GetReportPath(string reportName)
-    {
-        return Path.Combine(GetResourcePath(), reportName + ".rdl");
-    }
+    //private string GetReportPath(string reportName)
+    //{
+    //    return Path.Combine(GetResourcePath(), reportName + ".rdl");
+    //}
 
     #endregion
 

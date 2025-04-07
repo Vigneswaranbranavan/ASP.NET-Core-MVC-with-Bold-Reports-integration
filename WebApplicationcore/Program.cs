@@ -1,18 +1,16 @@
-using System.Web.Services.Description;
+﻿var builder = WebApplication.CreateBuilder(args);
 
-var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
+
 builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen();
 builder.Services.AddMemoryCache();
+
+//builder.Services.AddSwaggerGen();
 //builder.Services.AddBoldReportDesigner();
 //builder.Services.AddBoldReportViewer();
-builder.Services.AddMemoryCache();
-builder.Services.AddControllersWithViews();
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -20,6 +18,10 @@ builder.Services.AddCors(options =>
                         .AllowAnyMethod()
                         .AllowAnyHeader());
 });
+
+// 🔌 Register Web API data extension 
+BoldReports.Web.ReportConfig.DefaultSettings = new BoldReports.Web.ReportSettings()
+    .RegisterExtensions(new List<string> { "BoldReports.Data.WebData" });
 
 var app = builder.Build();
 
@@ -36,7 +38,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseCors("AllowAllOrigins"); 
+app.UseCors("AllowAllOrigins");
+
+//app.UseBoldReports();
+
 app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
