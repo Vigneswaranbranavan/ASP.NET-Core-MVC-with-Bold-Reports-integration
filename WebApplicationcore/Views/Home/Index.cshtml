@@ -1,9 +1,4 @@
-﻿@* <bold-report-viewer id="viewer" *@
-@*                     report-service-url="/api/ReportViewer" *@
-@*                     report-path="StudentManagementSystemStudentsDetails.rdl"> *@
-@* </bold-report-viewer> *@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Bold Reports - Report Designer</title>
@@ -31,15 +26,11 @@
         <div id="report-designer-container">
 
             <bold-report-designer id="reportDesigner"
-                                  service-url="/api/ReportDesigner">
+                                  service-url="/api/ReportDesigner"
+                                  filter-data-connectors='["JSON"]'>
             </bold-report-designer>
         </div>
     </div>
 
-
-
-
 </body>
 </html>
-
-
